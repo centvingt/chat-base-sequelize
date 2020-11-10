@@ -1,0 +1,12 @@
+html
+    head
+        title Inscription
+        meta(charset='utf-8')
+        link(rel="stylesheet", href="/css/style.css")
+    body
+        include nav.pug
+        h1 S’inscrire
+        form(action="/signup", method="post")
+            input(type="email", name="email" placeholder="E-mail")
+            input(type="password", name="password" placeholder="Mot de passe")
+            input(type="submit", value="envoyer")
