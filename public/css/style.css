@@ -1,3 +1,9 @@
 html {
     font-family: sans-serif;
 }
+.success {
+    color: #080;
+}
+.danger {
+    color: #f00;
+}

@@ -3,9 +3,19 @@ module.exports = {
         res.render('signup.pug')
     },
     postSignup: (req, res) => {
-        console.log('POST/signup -> req.body.email:', req.body.email)
-        console.log('POST/signup -> req.body.password:', req.body.password)
-        res.render('signup.pug')
+        const { email, password, username } = req.body
+
+        console.log('POST/signup -> email:', email)
+        console.log('POST/signup -> password:', password)
+        console.log('POST/signup -> username:', username)
+        console.log('-----------------')
+
+        res.render('signup.pug', {
+            alert: {
+                type: 'success',
+                message: `Utilisateur ${username} enregistré`,
+            },
+        })
     },
     getSignin: (req, res) => {
         res.render('signin.pug')
