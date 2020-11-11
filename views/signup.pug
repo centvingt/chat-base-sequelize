@@ -12,4 +12,4 @@ html
             input(type="text", name="username" placeholder="Nom d’utilisateur")
             input(type="submit", value="envoyer")
         if alert
-            p(class={success: alert.type === 'success', danger: alert.type === 'danger'}) #{alert.message}
+            p(class={success: alert.success, danger: !alert.success}) #{alert.message}

@@ -12,7 +12,7 @@ module.exports = {
 
         res.render('signup.pug', {
             alert: {
-                type: 'success',
+                success: true,
                 message: `Utilisateur ${username} enregistré`,
             },
         })
